@@ -1,0 +1,11 @@
+STATIC VALIDATION — 2026-11-05
+
+public: HTML parse errors=0; duplicate IDs=0; missing local assets=0; images without alt=0
+docs: HTML parse errors=0; duplicate IDs=0; missing local assets=0; images without alt=0
+docs/v501: HTML parse errors=0; duplicate IDs=0; missing local assets=0; images without alt=0
+android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www: HTML parse errors=0; duplicate IDs=0; missing local assets=0; images without alt=0
+AndroidManifest.xml: XML valid; activity_count=1; permissions=1
+
+Secret-pattern scan: 344 text files scanned; 0 common private-key/API-token pattern hits; 0 non-source files with session/secret/token names.
+Browser visual test: NOT RUN successfully; Chromium policy blocked localhost and local-file navigation.
+Android build/install: NOT RUN; Gradle, Gradle Wrapper, Android SDK, sdkmanager and adb unavailable.

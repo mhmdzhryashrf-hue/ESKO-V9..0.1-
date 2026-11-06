@@ -1,0 +1,11 @@
+node_modules/
+auth_info/
+auth_info*/
+creds.json
+session-*.json
+sender-key-*.json
+pre-key-*.json
+*.log
+*.tmp
+data/*.json
+data/*.bak*

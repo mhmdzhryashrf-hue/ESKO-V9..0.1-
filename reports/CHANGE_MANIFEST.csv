@@ -1,0 +1,41 @@
+﻿change_type,relative_path
+modified,README-AR.md differ
+modified,android/ESKO-ANDROID-V9-CANDIDATE/ANDROID-REVIEW-AR.md differ
+modified,android/ESKO-ANDROID-V9-CANDIDATE/README-AR.md differ
+modified,android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/AndroidManifest.xml differ
+modified,android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/app.js differ
+modified,android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/index.html differ
+added,android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/six-sections.js
+modified,android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/store.js differ
+modified,android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/style.css differ
+modified,backend/server.mjs differ
+modified,docs/app.js differ
+modified,docs/index.html differ
+added,docs/six-sections.js
+modified,docs/store.js differ
+modified,docs/style.css differ
+modified,docs/v501/app.js differ
+modified,docs/v501/index.html differ
+added,docs/v501/six-sections.js
+modified,docs/v501/store.js differ
+modified,docs/v501/style.css differ
+modified,package.json differ
+modified,public/app.js differ
+modified,public/index.html differ
+added,public/six-sections.js
+modified,public/store.js differ
+modified,public/style.css differ
+added,reports/BACKUP_INDEX_AR.md
+added,reports/CHANGE_MANIFEST.csv
+added,reports/EXECUTION_REPORT_AR.md
+added,reports/PDF_AXIS_INVENTORY.csv
+added,reports/PDF_COMMAND_COVERAGE.csv
+added,reports/PDF_REQUIREMENTS_AUDIT_AR.md
+added,reports/RELEASE_NOTES_AR.md
+added,reports/SHA256_MANIFEST.csv
+added,reports/STATIC_VALIDATION_RESULTS.txt
+added,reports/TEST_RESULTS_FINAL.txt
+added,tests/android-source-audit.mjs
+added,tests/platform-social-commerce.mjs
+added,tests/six-sections-ui.mjs
+modified,tests/web-roots.mjs differ

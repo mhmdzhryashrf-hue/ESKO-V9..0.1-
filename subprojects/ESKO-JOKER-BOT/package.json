@@ -1,0 +1,12 @@
+{
+  "name": "esko-joker-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "بوت واتساب ترفيهي وحمائي متعدد الوحدات، يندمج مع اتصال واتساب الموجود لديك",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check src/index.js && node --check src/store/json-store.js && node --check src/core/commands.js && node --check src/core/moderation.js && node --check src/core/message-handler.js && node --check src/core/games.js && node --check src/core/utils.js",
+    "test": "node test/smoke-test.js"
+  },
+  "engines": { "node": ">=18" }
+}

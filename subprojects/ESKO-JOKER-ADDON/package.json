@@ -1,0 +1,12 @@
+{
+  "name": "esko-joker-addon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Optional ESKO Joker add-on for an existing WhatsApp client; never connects by itself",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check index.js && node --check connection.example.js && node --check store.js && node --check config.js && node --check core/processor.js && node --check core/commands.js && node --check core/moderation.js && node --check core/games.js && node --check core/utils.js",
+    "test": "node test/smoke-test.js"
+  },
+  "engines": { "node": ">=18" }
+}

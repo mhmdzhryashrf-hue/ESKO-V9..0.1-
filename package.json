@@ -1,0 +1,26 @@
+{
+  "name": "esko-open-hub",
+  "version": "5.0.1",
+  "private": true,
+  "type": "module",
+  "description": "ESKO OPEN HUB V5.0.1 compatibility baseline with audited staged web merge and separate Android candidate source (not a release)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node backend/server.mjs",
+    "dev": "ESKO_HOST=127.0.0.1 ESKO_PORT=8788 node backend/server.mjs",
+    "check": "node --check backend/server.mjs && node --check public/bot-draft-validation.js && node --check docs/bot-draft-validation.js && node --check docs/v501/bot-draft-validation.js && node --check public/esko-titan-update.js && node --check docs/esko-titan-update.js && node --check docs/v501/esko-titan-update.js && node --check public/app.js && node --check public/store.js && node --check public/image-processor.js && node --check public/v5/esko-v5.js && node --check bots/auto-links.cjs && node --check bots/generate-bots.cjs && node --check public/six-sections.js && node --check docs/app.js && node --check docs/store.js && node --check docs/six-sections.js && node --check docs/v501/app.js && node --check docs/v501/store.js && node --check docs/v501/six-sections.js && node --check android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/app.js && node --check android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/store.js && node --check android/ESKO-ANDROID-V9-CANDIDATE/app/src/main/assets/www/six-sections.js",
+    "test:catalog": "node tests/check-package.js",
+    "test:api": "node tests/v5-integration.mjs",
+    "test:smoke": "node tests/smoke-test.mjs",
+    "test": "npm run check && npm run test:catalog && npm run test:smoke && npm run test:api && npm run test:audit && npm run test:web-roots && npm run test:bot-draft && npm run test:subprojects && npm run test:six-sections-ui && npm run test:platform && npm run test:android-source",
+    "test:audit": "node tests/audit-regression.mjs",
+    "test:web-roots": "node tests/web-roots.mjs",
+    "test:bot-draft": "node tests/bot-draft-validation.mjs",
+    "test:subprojects": "npm --prefix subprojects/ESKO-JOKER-BOT run check && npm --prefix subprojects/ESKO-JOKER-BOT test && npm --prefix subprojects/ESKO-JOKER-ADDON run check && npm --prefix subprojects/ESKO-JOKER-ADDON test",
+    "test:six-sections-ui": "node tests/six-sections-ui.mjs",
+    "test:platform": "node tests/platform-social-commerce.mjs",
+    "test:android-source": "node tests/android-source-audit.mjs"
+  }
+}

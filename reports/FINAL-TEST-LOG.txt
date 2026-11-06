@@ -1,0 +1,62 @@
+
+> esko-open-hub@5.0.1 test
+> npm run check && npm run test:catalog && npm run test:smoke && npm run test:api && npm run test:audit && npm run test:web-roots && npm run test:bot-draft && npm run test:subprojects
+
+
+> esko-open-hub@5.0.1 check
+> node --check backend/server.mjs && node --check public/bot-draft-validation.js && node --check docs/bot-draft-validation.js && node --check docs/v501/bot-draft-validation.js && node --check public/esko-titan-update.js && node --check docs/esko-titan-update.js && node --check docs/v501/esko-titan-update.js && node --check public/app.js && node --check public/store.js && node --check public/image-processor.js && node --check public/v5/esko-v5.js && node --check bots/auto-links.cjs && node --check bots/generate-bots.cjs
+
+
+> esko-open-hub@5.0.1 test:catalog
+> node tests/check-package.js
+
+PASS: V5 package structure, 1000 tool cards/10 groups, 51 games/11 playable, 60 bot templates, network gate, image processing and Android source.
+
+> esko-open-hub@5.0.1 test:smoke
+> node tests/smoke-test.mjs
+
+PASS: static app/headers, unique accounts, sessions, recovery and re-login after session revocation, general chat, groups and group messages, accepted DM, report logging, and blocked-domain guard.
+
+> esko-open-hub@5.0.1 test:api
+> node tests/v5-integration.mjs
+
+PASS: shared health/probe, V5 static shell, account session persistence, hashed session storage, 300KB WebP validation and sync, same-origin protection, 7-hour chat TTL pruning, and session revocation after recovery.
+
+> esko-open-hub@5.0.1 test:audit
+> node tests/audit-regression.mjs
+
+PASS: configurable static root, Titan asset delivery, MP3 MIME, production secure session/logout cookies, and concurrent duplicate-registration race protection.
+
+> esko-open-hub@5.0.1 test:web-roots
+> node tests/web-roots.mjs
+
+PASS public: index, six-section add-on delivery, traversal guard
+PASS docs: index, six-section add-on delivery, traversal guard
+PASS docs/v501: index, six-section add-on delivery, traversal guard
+
+> esko-open-hub@5.0.1 test:bot-draft
+> node tests/bot-draft-validation.mjs
+
+PASS: bot draft validation, Unicode name bounds, command syntax, duplicate detection, and 100-command maximum
+
+> esko-open-hub@5.0.1 test:subprojects
+> npm --prefix subprojects/ESKO-JOKER-BOT run check && npm --prefix subprojects/ESKO-JOKER-BOT test && npm --prefix subprojects/ESKO-JOKER-ADDON run check && npm --prefix subprojects/ESKO-JOKER-ADDON test
+
+
+> esko-joker-bot@1.0.0 check
+> node --check src/index.js && node --check src/store/json-store.js && node --check src/core/commands.js && node --check src/core/moderation.js && node --check src/core/message-handler.js && node --check src/core/games.js && node --check src/core/utils.js
+
+
+> esko-joker-bot@1.0.0 test
+> node test/smoke-test.js
+
+✅ نجحت اختبارات ESKO JOKER BOT الأساسية
+
+> esko-joker-addon@1.0.0 check
+> node --check index.js && node --check connection.example.js && node --check store.js && node --check config.js && node --check core/processor.js && node --check core/commands.js && node --check core/moderation.js && node --check core/games.js && node --check core/utils.js
+
+
+> esko-joker-addon@1.0.0 test
+> node test/smoke-test.js
+
+✅ اختبارات الإضافة الأساسية نجحت

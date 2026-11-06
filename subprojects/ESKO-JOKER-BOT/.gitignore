@@ -1,0 +1,4 @@
+node_modules/
+*.log
+data/backups/*
+!data/backups/.gitkeep
